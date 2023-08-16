@@ -11,10 +11,17 @@
   },
   "dependencies": {
     "astro": "^2.10.1",
-    "microcms-js-sdk": "^2.5.0"
+    "microcms-js-sdk": "^2.5.0",
+    "the-new-css-reset": "^1.9.0"
   },
   "devDependencies": {
     "prettier": "^3.0.1",
-    "prettier-plugin-astro": "^0.11.0"
-  }
+    "prettier-plugin-astro": "^0.11.0",
+    "sass": "^1.64.2"
+  },
+  "description": "``` npm create astro@latest -- --template basics ```",
+  "main": "index.js",
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
 }

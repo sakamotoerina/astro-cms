@@ -6,28 +6,54 @@ import { getBlogs } from "../library/microcms";
 const response = await getBlogs({ fields: ["id", "title"] });
 ---
 
-<Layout title="My first blog with Astro">
+<Layout title="Astro CMS テストサイト">
   <main>
-    <ul>
-      {
-        response.contents.map((content: any) => (
-          <li>
-            <a href={content.id}>{content.title}</a>
-          </li>
-        ))
-      }
-    </ul>
+    <div class="kv">
+      <img
+        src="https://placehold.jp/1280x600.png"
+        alt="keyvisual"
+        width="1280"
+        height="600"
+      />
+    </div>
+    <div class="content blog">
+      <h2>blog</h2>
+      <ul class="blog">
+        {
+          response.contents.map((content: any) => (
+            <li>
+              <a href={content.id}>{content.title}</a>
+            </li>
+          ))
+        }
+      </ul>
+    </div>
   </main>
 </Layout>
 
-<style>
+<style lang="scss">
   main {
-    margin: auto;
-    padding: 1em;
-    max-width: 60ch;
-    color: white;
+    width: 100%;
   }
-  a {
-    color: white;
+  .kv {
+    width: 100%;
+    img {
+      width: 100%;
+      height: 600px;
+      object-fit: cover;
+    }
+  }
+  .content {
+    /* center + max-width:1280px + min-margin: 10px */
+    margin-inline: max(10px, 50% - 1280px/2);
+  }
+  .blog {
+    max-width: max-content;
+    margin-inline: auto;
+    ul {
+      li {
+        margin: 1em;
+      }
+    }
   }
 </style>
