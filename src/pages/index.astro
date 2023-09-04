@@ -8,14 +8,6 @@ const response = await getBlogs({ fields: ["id", "title"] });
 
 <Layout title="Astro CMS テストサイト">
   <main>
-    <div class="kv">
-      <img
-        src="https://placehold.jp/1280x600.png"
-        alt="keyvisual"
-        width="1280"
-        height="600"
-      />
-    </div>
     <div class="content blog">
       <h2>blog</h2>
       <ul class="blog">
@@ -34,14 +26,6 @@ const response = await getBlogs({ fields: ["id", "title"] });
 <style lang="scss">
   main {
     width: 100%;
-  }
-  .kv {
-    width: 100%;
-    img {
-      width: 100%;
-      height: 600px;
-      object-fit: cover;
-    }
   }
   .content {
     /* center + max-width:1280px + min-margin: 10px */
